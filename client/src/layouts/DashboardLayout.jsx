@@ -6,10 +6,11 @@ export default function DashboardLayout({ children }) {
     <div className="layout">
       <Sidebar />
       <div className="layout-content">
+        <div className="ambient ambient-one" />
+        <div className="ambient ambient-two" />
         <Navbar />
-        <main>{children}</main>
+        <main className="page-shell">{children}</main>
       </div>
     </div>
   );
 }
-
