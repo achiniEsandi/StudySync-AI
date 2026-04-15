@@ -5,6 +5,10 @@ import DashboardPage from '../pages/dashboard/DashboardPage.jsx';
 import PlannerPage from '../pages/planner/PlannerPage.jsx';
 import AnalyticsPage from '../pages/analytics/AnalyticsPage.jsx';
 import DashboardLayout from '../layouts/DashboardLayout.jsx';
+import SubjectsPage from '../features/subjects/pages/SubjectsPage.jsx';
+import SubjectCreatePage from '../features/subjects/pages/SubjectCreatePage.jsx';
+import SubjectEditPage from '../features/subjects/pages/SubjectEditPage.jsx';
+import SubjectDetailsPage from '../features/subjects/pages/SubjectDetailsPage.jsx';
 
 export default function AppRouter() {
   return (
@@ -16,6 +20,38 @@ export default function AppRouter() {
         element={
           <DashboardLayout>
             <DashboardPage />
+          </DashboardLayout>
+        }
+      />
+      <Route
+        path="/subjects"
+        element={
+          <DashboardLayout>
+            <SubjectsPage />
+          </DashboardLayout>
+        }
+      />
+      <Route
+        path="/subjects/new"
+        element={
+          <DashboardLayout>
+            <SubjectCreatePage />
+          </DashboardLayout>
+        }
+      />
+      <Route
+        path="/subjects/:subjectId"
+        element={
+          <DashboardLayout>
+            <SubjectDetailsPage />
+          </DashboardLayout>
+        }
+      />
+      <Route
+        path="/subjects/:subjectId/edit"
+        element={
+          <DashboardLayout>
+            <SubjectEditPage />
           </DashboardLayout>
         }
       />
@@ -39,4 +75,3 @@ export default function AppRouter() {
     </Routes>
   );
 }
-
