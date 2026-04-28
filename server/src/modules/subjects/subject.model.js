@@ -4,6 +4,7 @@ import {
   CA_TYPES,
   FINAL_EXAM_STATUS,
   LEARNING_STATUS,
+  PREPARATION_LEVEL,
 } from './subject.constants.js';
 
 const learningComponentSchema = new mongoose.Schema(
